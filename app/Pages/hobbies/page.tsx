@@ -20,17 +20,17 @@ const hobbies = [
     images: [
       {
         title: "The Witcher 3",
-        src: "/images/gaming/witcher3.jpg",
+        src: "/gaming/game-1.jpg",
         description: "Game RPG dengan dunia terbuka yang epik",
       },
       {
         title: "Civilization VI",
-        src: "/images/gaming/civ6.jpg",
+        src: "/gaming/game-2.jpg",
         description: "Game strategi peradaban terbaik",
       },
       {
         title: "Portal 2",
-        src: "/images/gaming/portal2.jpg",
+        src: "/gaming/game-3.jpg",
         description: "Game puzzle dengan cerita yang menarik",
       },
     ],
@@ -53,17 +53,17 @@ const hobbies = [
     images: [
       {
         title: "Pink Floyd - Dark Side of the Moon",
-        src: "/images/music/pink-floyd.jpg",
+        src: "/music/music-1.jpg",
         description: "Album rock progresif legendaris",
       },
       {
         title: "Miles Davis - Kind of Blue",
-        src: "/images/music/miles-davis.jpg",
+        src: "/music/music-2.jpg",
         description: "Album jazz klasik yang ikonik",
       },
       {
         title: "Daft Punk - Random Access Memories",
-        src: "/images/music/daft-punk.jpg",
+        src: "/music/music-3.jpg",
         description: "Album elektronik modern yang revolusioner",
       },
     ],
@@ -85,17 +85,17 @@ const hobbies = [
     images: [
       {
         title: "Inception",
-        src: "/images/movies/inception.jpg",
+        src: "/film/film-1.jpg",
         description: "Film sci-fi yang mengeksplorasi alam mimpi",
       },
       {
         title: "The Godfather",
-        src: "/images/movies/godfather.jpg",
+        src: "/film/film-2.jpg",
         description: "Kisah epik mafia yang legendaris",
       },
       {
         title: "Parasite",
-        src: "/images/movies/parasite.jpg",
+        src: "/film/film-3.jpg",
         description: "Film Korea yang memenangkan Oscar",
       },
     ],
@@ -116,17 +116,17 @@ const hobbies = [
     images: [
       {
         title: "Digital Art",
-        src: "/images/art/digital.jpg",
+        src: "/art/art-1.jpg",
         description: "Karya seni digital modern",
       },
       {
         title: "Watercolor Landscape",
-        src: "/images/art/watercolor.jpg",
+        src: "/art/art-2.jpg",
         description: "Lukisan pemandangan dengan cat air",
       },
       {
         title: "Portrait Sketch",
-        src: "/images/art/portrait.jpg",
+        src: "/art/art-3.jpg",
         description: "Sketsa potret dengan pensil",
       },
     ],
@@ -147,17 +147,17 @@ const hobbies = [
     images: [
       {
         title: "1984 by George Orwell",
-        src: "/images/books/1984.jpg",
+        src: "/book/book-1.jpg",
         description: "Novel distopia klasik tentang pengawasan total",
       },
       {
         title: "Sapiens",
-        src: "/images/books/sapiens.jpg",
+        src: "/book/book-2.jpg",
         description: "Sejarah singkat umat manusia",
       },
       {
         title: "Science Fiction Collection",
-        src: "/images/books/scifi.jpg",
+        src: "/book/book-3.jpg",
         description: "Koleksi buku fiksi ilmiah terbaik",
       },
     ],
@@ -166,7 +166,7 @@ const hobbies = [
 
 const HobbiesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-base-200 to-base-300 py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-base-200 to-base-300 py-20 px-4 sm:px-6 lg:px-8 text-black">
       <HobbiesContent hobbies={hobbies} />
     </div>
   );

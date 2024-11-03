@@ -25,7 +25,7 @@ const projects: Project[] = [
     description:
       "A modern portfolio website built with Next.js and TailwindCSS featuring dark mode, responsive design, and smooth animations.",
     technologies: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
-    imageUrl: "/images/projects/portfolio.jpg",
+    imageUrl: "/portofolio.jpg",
     liveUrl: "https://portfolio.example.com",
     githubUrl: "https://github.com/username/portfolio",
     category: "Web Development",
@@ -36,7 +36,7 @@ const projects: Project[] = [
     description:
       "A comprehensive dashboard for e-commerce management with real-time analytics, inventory management, and order processing.",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-    imageUrl: "/images/projects/dashboard.jpg",
+    imageUrl: "/ecommerce.jpg",
     liveUrl: "https://dashboard.example.com",
     githubUrl: "https://github.com/username/dashboard",
     category: "Full Stack",
@@ -47,12 +47,29 @@ const projects: Project[] = [
     description:
       "A weather application that provides real-time weather updates and forecasts with a clean, intuitive interface.",
     technologies: ["React Native", "Weather API", "Redux", "TypeScript"],
-    imageUrl: "/images/projects/weather-app.jpg",
+    imageUrl: "/weatherapp.jpg",
     liveUrl: "https://weather.example.com",
     githubUrl: "https://github.com/username/weather-app",
     category: "Mobile Development",
   },
-  // Tambahkan project lainnya sesuai kebutuhan
+  {
+    id: 4,
+    title: "Brand Identity Design",
+    description:
+      "Complete brand identity design including logo, business cards, and marketing materials using Adobe Creative Suite.",
+    technologies: ["Illustrator", "Photoshop", "Figma"],
+    imageUrl: "/brand-design.jpg",
+    category: "Graphic Design",
+  },
+  {
+    id: 5,
+    title: "Social Media Graphics",
+    description:
+      "Created engaging social media graphics and marketing materials for various clients.",
+    technologies: ["Photoshop", "Illustrator", "Figma"],
+    imageUrl: "/social-media.jpg",
+    category: "Graphic Design",
+  },
 ];
 
 const ProjectPage = () => {

@@ -5,8 +5,19 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import me from "@/public/Logo.svg"; // Pastikan path gambar sesuai
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const HeroPage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // atau tampilkan placeholder
+  }
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -81,25 +92,32 @@ const HeroPage = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-base-content/70 mb-8 max-w-xl"
           >
-            I'm Muhamad Rizki Ardiansyah, a passionate Web Developer & UI/UX
-            Designer crafting beautiful and functional digital experiences.
+            I'm Muhamad Rizki Ardiansyah, a passionate Web Developer, UI/UX
+            Designer, and Graphic Designer crafting beautiful and functional
+            digital experiences.
           </motion.p>
 
           {/* Tech Stack */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start"
+            className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start text-primary"
           >
-            {["React", "Next.js", "TypeScript", "Tailwind CSS"].map(
-              (tech, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 bg-base-200 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-300"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+            {[
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Figma",
+              "Illustrator",
+              "Photoshop",
+            ].map((tech, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-base-200 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-300"
+              >
+                {tech}
+              </span>
+            ))}
           </motion.div>
 
           {/* CTA Buttons */}
@@ -160,30 +178,6 @@ const HeroPage = () => {
             ))}
           </div>
         </motion.div>
-      </motion.div>
-
-      {/* Social Links */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-10 left-0 right-0 flex justify-center gap-6"
-      >
-        {[
-          { Icon: FaGithub, href: "https://github.com/Raykuza12" },
-          { Icon: FaEnvelope, href: "mailto:muhrizkiard@gmail.com" },
-          { Icon: FaLinkedin, href: "#" },
-        ].map(({ Icon, href }, index) => (
-          <a
-            key={index}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base-content/60 hover:text-primary transform hover:scale-110 transition-all duration-300"
-          >
-            <Icon className="w-6 h-6" />
-          </a>
-        ))}
       </motion.div>
     </div>
   );

@@ -109,7 +109,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-base-200 to-base-300 flex items-center justify-center p-4 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-base-200 to-base-300 flex items-center justify-center p-4 pt-20 text-black">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -117,11 +117,7 @@ const ContactPage = () => {
         className="card lg:card-side bg-base-100 shadow-xl max-w-full w-full"
       >
         <figure className="lg:w-1/2 p-6 hidden lg:block">
-          <img
-            src="/contact-illustration.svg"
-            alt="Contact"
-            className="rounded-xl"
-          />
+          <img src="/contactpage.jpg" alt="Contact" className="rounded-xl" />
         </figure>
         <div className="card-body lg:w-1/2">
           <h2 className="card-title text-2xl font-bold mb-6">Hubungi Saya</h2>

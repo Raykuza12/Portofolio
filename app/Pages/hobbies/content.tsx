@@ -42,11 +42,40 @@ const HobbiesContent: React.FC<HobbiesContentProps> = ({ hobbies }) => {
     setActiveHobby(activeHobby === id ? null : id);
   };
 
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        height: {
+          duration: 0.3,
+        },
+        opacity: {
+          duration: 0.2,
+          delay: 0.1,
+        },
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        height: {
+          duration: 0.3,
+        },
+        opacity: {
+          duration: 0.2,
+        },
+      },
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       className="max-w-7xl mx-auto"
     >
       <h1 className="text-4xl font-bold text-center mb-12">Hobi dan Minat</h1>
@@ -76,6 +105,7 @@ const HobbiesContent: React.FC<HobbiesContentProps> = ({ hobbies }) => {
                 <motion.div
                   className="flex justify-center mt-4"
                   animate={{ rotate: activeHobby === hobby.id ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <ChevronDownIcon className="w-6 h-6" />
                 </motion.div>
@@ -83,27 +113,24 @@ const HobbiesContent: React.FC<HobbiesContentProps> = ({ hobbies }) => {
               <AnimatePresence>
                 {activeHobby === hobby.id && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-6"
+                    variants={contentVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="px-6 pb-6 overflow-hidden"
                   >
                     <h3 className="font-semibold mb-4">Favorit:</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                       {hobby.images.map((image, index) => (
-                        <motion.div
+                        <div
                           key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.1 }}
                           className="group relative overflow-hidden rounded-lg shadow-lg"
                         >
                           <img
                             src={image.src}
                             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                           />
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                     <div className="mt-4">

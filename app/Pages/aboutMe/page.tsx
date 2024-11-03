@@ -11,6 +11,7 @@ import {
   FaMapMarkerAlt,
   FaGraduationCap,
   FaVenusMars,
+  FaInstagram,
 } from "react-icons/fa";
 import { MdEmail, MdWork } from "react-icons/md";
 import me from "@/public/me.jpg";
@@ -27,6 +28,9 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiStrapi,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiFigma,
 } from "react-icons/si";
 import Rating from "@/app/component/rating";
 
@@ -61,7 +65,7 @@ const AboutMePage = () => {
     {
       icon: <MdWork />,
       label: "Pekerjaan",
-      value: "Web Developer",
+      value: "Web Developer & Graphic Designer",
     },
   ];
 
@@ -159,10 +163,22 @@ const AboutMePage = () => {
       category: "Tools",
     },
     {
-      name: "RESTful APIs",
-      icon: <SiStrapi />,
-      level: 87,
-      category: "Backend",
+      name: "Figma",
+      icon: <SiFigma />,
+      level: 80,
+      category: "Design",
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: <SiAdobephotoshop className="text-[#31A8FF]" />,
+      level: 85,
+      category: "Design",
+    },
+    {
+      name: "Adobe Illustrator",
+      icon: <SiAdobeillustrator className="text-[#FF9A00]" />,
+      level: 90,
+      category: "Design",
     },
   ];
 
@@ -187,6 +203,13 @@ const AboutMePage = () => {
       label: "WhatsApp",
       href: "https://wa.me/6283874561641",
       username: "+62 838-7456-1641",
+    },
+    {
+      id: 4,
+      icon: <FaInstagram className="h-6 w-6" />,
+      label: "Instagram",
+      href: "https://www.instagram.com/muhrizkiard/profilecard/?igsh=MXg5Z2NneTliamdobg==",
+      username: "@muhrizkiard",
     },
   ];
 
@@ -218,6 +241,15 @@ const AboutMePage = () => {
       description:
         "Assisted in building responsive websites using HTML, CSS, and JavaScript.",
     },
+    {
+      id: 4,
+      position: "Graphic Designer",
+      company: "Creative Studio",
+      yearStart: "2021",
+      yearEnd: "Present",
+      description:
+        "Creating visual content using Adobe Creative Suite (Photoshop, Illustrator) and Figma for various digital and print media projects.",
+    },
   ];
 
   return (
@@ -243,12 +275,12 @@ const AboutMePage = () => {
             Muhamad Rizki Ardiansyah
           </h1>
           <p className="mt-2 text-xl text-base-content/70">
-            Web Developer & UI/UX Enthusiast
+            Web Developer, UI/UX Designer & Graphic Designer
           </p>
           <div className="mt-8">
             <h2 className="text-2xl font-semibold text-black mb-4 ">
               User Ratings
-            </h2 >
+            </h2>
             <Rating />
           </div>
         </div>
@@ -290,9 +322,9 @@ const AboutMePage = () => {
             </h2>
             <p className="text-base-content/70 leading-relaxed">
               Saya adalah seorang mahasiswa jurusan Sistem Informasi di
-              Universitas Ma'soem dengan passion dalam pengembangan web dan
-              desain UI/UX. Saya memiliki ketertarikan yang kuat dalam
-              menciptakan pengalaman pengguna yang menarik dan fungsional.
+              Universitas Ma'soem dengan passion dalam pengembangan web, desain
+              UI/UX dan Desain Grafis. Saya memiliki ketertarikan yang kuat
+              dalam menciptakan pengalaman pengguna yang menarik dan fungsional.
               Selalu bersemangat untuk belajar teknologi baru dan menciptakan
               solusi inovatif untuk masalah kompleks.
             </p>
