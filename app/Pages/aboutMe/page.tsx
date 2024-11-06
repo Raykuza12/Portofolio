@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -32,9 +32,11 @@ import {
   SiAdobephotoshop,
   SiFigma,
 } from "react-icons/si";
-import Rating from "@/app/component/rating";
+import { StarIcon } from "@heroicons/react/24/outline";
+import Stars from "@/app/component/Stars";
 
 const AboutMePage = () => {
+  const [stars, setStars] = useState(0);
   const personalInfo = [
     {
       icon: <FaUserAlt />,
@@ -252,6 +254,10 @@ const AboutMePage = () => {
     },
   ];
 
+  const handleStarClick = () => {
+    setStars((prev) => prev + 1);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-base-200 to-base-300 py-20 px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -260,6 +266,9 @@ const AboutMePage = () => {
         transition={{ duration: 0.5 }}
         className="max-w-4xl mx-auto bg-base-100 rounded-lg shadow-xl overflow-hidden"
       >
+        {/* Star button */}
+        <Stars />
+
         {/* Header Section */}
         <div className="p-8 text-center border-b border-base-300">
           <div className="relative w-32 h-32 mx-auto mb-4">
@@ -277,12 +286,6 @@ const AboutMePage = () => {
           <p className="mt-2 text-xl text-base-content/70">
             Web Developer, UI/UX Designer & Graphic Designer
           </p>
-          <div className="mt-8">
-            <h2 className="text-2xl font-semibold text-black mb-4 ">
-              User Ratings
-            </h2>
-            <Rating />
-          </div>
         </div>
 
         {/* Main Content */}

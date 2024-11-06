@@ -166,7 +166,7 @@ const hobbies = [
 
 const HobbiesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-base-200 to-base-300 py-20 px-4 sm:px-6 lg:px-8 text-black">
+    <div className="min-h-screen bg-gradient-to-b from-base-200 to-base-300 py-20 px-4 sm:px-6 lg:px-8 text-base-content">
       <HobbiesContent hobbies={hobbies} />
     </div>
   );
