@@ -286,6 +286,9 @@ const AboutMePage = () => {
           <p className="mt-2 text-xl text-base-content/70">
             Web Developer, UI/UX Designer & Graphic Designer
           </p>
+          <div className="mt-4">
+            <Rating />
+          </div>
         </div>
 
         {/* Main Content */}
