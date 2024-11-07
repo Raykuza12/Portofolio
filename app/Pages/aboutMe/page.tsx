@@ -34,6 +34,8 @@ import {
 } from "react-icons/si";
 import { StarIcon } from "@heroicons/react/24/outline";
 import Stars from "@/app/component/Stars";
+import Rating from "@/app/component/rating";
+
 
 const AboutMePage = () => {
   const [stars, setStars] = useState(0);
