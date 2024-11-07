@@ -45,7 +45,7 @@ const Rating = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex items-center gap-2">
-        <span className="text-3xl font-bold text-black">
+        <span className="text-3xl font-bold text-base-content">
           {averageRating.toFixed(1)}
         </span>
         <div className="flex">
